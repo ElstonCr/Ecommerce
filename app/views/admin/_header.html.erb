@@ -1,0 +1,46 @@
+<div style="display: flex; justify-content: space-between;">
+  <nav class="navbar navbar-dark bg-dark border-body fixed-top" data-bs-theme="dark">
+    <div style="padding: 10px; display: flex; justify-content: space-between;">
+        <ul class="nav" style="margin: 0; padding: 0;">
+            <li class="nav-item" style="padding-top: 10px;">
+                <%=  link_to admin_path do %>
+                <i class="bi bi-shop-window" style="color: white; padding-left: 10px; padding-right: 10px; font-size: 25px;"></i>
+                <% end %>
+            </li>
+            <li class="nav" style="padding-top: 10px">
+                <%= link_to "Products", admin_path, class:"nav-link active" %>
+                <i class="bi bi-bag" style="color: white; padding-top: 5px; padding-right: 10px;  font-size: 20px;"></i>
+            </li>
+            <li class="nav" style="padding-top: 10px">
+                <%= link_to "Categories", admin_categories_path, class:"nav-link active" %>
+                <i class="bi bi-card-checklist" style="color: white; padding-top: 5px; padding-right: 10px;  font-size: 20px;"></i>
+            </li>
+            <li class="nav" style="padding-top: 10px">
+                <%= link_to "Orders",  admin_path, class:"nav-link active" %>
+                <i class="bi bi-box-seam" style="color: white; padding-top: 5px; padding-right: 10px;  font-size: 20px;"></i>
+            </li>
+            <li class="nav" style="padding-top: 10px">
+                <%= link_to  "Dashboard",  admin_path, class:"nav-link active" %>
+                <i class="bi bi-speedometer2" style="color: white; padding-top: 5px; padding-right: 10px;  font-size: 20px;"></i>
+            </li>
+            <li class="nav" style="padding-top: 10px">
+                <%= link_to "Edit Profile", edit_admin_registration_path, class:"nav-link active"%>
+                <i class="bi bi-person-circle" style="color: white; padding-top: 5px; padding-right: 10px;  font-size: 20px;"></i>
+            </li>
+        </ul>
+    </div>
+    <div style="padding-right: 20px;">
+        <ul class="nav">
+        <li>
+            <form class="d-flex" role="search" style="padding-right: 30px;">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </li>
+        <li>
+            <%= link_to "Log Out", destroy_admin_session_path, data: { turbo_method: :delete }, class:"btn btn-danger", style: "padding-right: 10px;" %>
+        </li>
+        </ul>
+    </div>
+</nav>
+</div>
